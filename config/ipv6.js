@@ -29,8 +29,8 @@ var config = {
     	  		dstPort: 5070
     		},
     		pause: 0,
-            payload:
-            'INVITE sip:hepgen@lge.qxip.ipcx.nl;user=phone SIP/2.0\r\n'+
+	        payload:
+	        'INVITE sip:hepgen@lge.qxip.ipcx.nl;user=phone SIP/2.0\r\n'+
                 'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
@@ -76,11 +76,11 @@ var config = {
     			srcIp: '3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y',
     			dstIp: '21a0:m4m4:qx1p:s1p4:1234',
     			srcPort: 5070,
-    	  		dstPort: 5060                
+    	  		dstPort: 5060
     		},
     		pause: 200,
-            payload:
-            'SIP/2.0 100 Trying\r\n'+
+	        payload:
+	        'SIP/2.0 100 Trying\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 INVITE\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
@@ -109,17 +109,17 @@ var config = {
     	  		dstPort: 5060
     		},
     		pause: 1000,
-            payload:
-            'SIP/2.0 180 Ringing\r\n'+
+	        payload:
+	        'SIP/2.0 180 Ringing\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 INVITE\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
-                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+            
+                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Content-Length: 285\r\n'+
                 'Contact: <sip:Fr4nkV1ncentZ4ppa@[3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Content-Type: application/sdp\r\n'+
-                'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+                
+                'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
                 'Allow: INVITE,BYE,ACK,OPTIONS,CANCEL,PRACK,UPDATE\r\n'+
                 'P-Early-Media: sendrecv\r\n'+
                 'v=0\r\n'+
@@ -135,9 +135,9 @@ var config = {
                 'a=rtpmap:101 telephone-event/8000\r\n'+
                 'a=fmtp:101 0-15\r\n'+
                 'a=silenceSupp:off - - - -\r\n'+
-                '\r\n\r\n'  
+                '\r\n\r\n'
         },
-        
+
         {
             // SIP Response 200 OK
     		rcinfo: {
@@ -153,26 +153,26 @@ var config = {
     			srcIp: '3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y',
     			dstIp: '21a0:m4m4:qx1p:s1p4:1234',
     			srcPort: 5070,
-    	  		dstPort: 5060                
+    	  		dstPort: 5060
     		},
     		pause: 1200,
-            payload:
+	        payload:
 	        'SIP/2.0 200 OK\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
-                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+            
+                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
-	            'Call-ID: '+call_id+'\r\n'+
-	            'CSeq: 1 INVITE\r\n'+
-	            'User-Agent: HEPGEN-UAS\r\n'+
-	            'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
-	            'Supported: replaces path, 100rel, timer\r\n'+
+	        'Call-ID: '+call_id+'\r\n'+
+	        'CSeq: 1 INVITE\r\n'+
+	        'User-Agent: HEPGEN-UAS\r\n'+
+	        'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
+	        'Supported: replaces path, 100rel, timer\r\n'+
                 'Contact: <sip:Fr4nkV1ncentZ4ppa@[3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Require: timer\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
-	            'Content-Type: application/sdp\r\n'+
-	            'Content-Length: 285\r\n'+
+	        'Content-Type: application/sdp\r\n'+
+	        'Content-Length: 285\r\n'+
                 'Privacy: none\r\n'+
-	            'v=0\r\n'+
+	        'v=0\r\n'+
                 'o=- 3795340956 3795340956 IN IP6 oit.k1r0l.qxiphepgenipv6.ipcx.nl\r\n'+
                 's=-\r\n'+
                 'c=IN IP6 3l4k:s4bb:l3dd:z3pp::7777\r\n'+
@@ -185,11 +185,11 @@ var config = {
                 'a=rtpmap:101 telephone-event/8000\r\n'+
                 'a=fmtp:101 0-15\r\n'+
                 'a=silenceSupp:off - - - -\r\n'+
-	            '\r\n\r\n'
+	        '\r\n\r\n'
         },
 
         {
-            // SIP ACK 
+            // SIP ACK
     		rcinfo: {
     			type: 'HEP',
     			version: 3,
@@ -206,12 +206,12 @@ var config = {
     	  		dstPort: 5070
     		},
     		pause: 1400,
-            payload:
+	        payload:
 	        'ACK sip:Fr4nkV1ncentZ4ppa@[3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
                 'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
-                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+            
+                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 ACK\r\n'+
                 'Contact: <sip:mod_sofia@[21a0:m4m4:qx1p:s1p4:0:0:0:1234]:5060>\r\n'+
@@ -219,7 +219,6 @@ var config = {
                 'Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, PRACK\r\n'+
                 '\r\n\r\n'
         },
-
 
         {
             // SIP BYE
@@ -239,12 +238,12 @@ var config = {
     	  		dstPort: 5070
     		},
     		pause: 1600,
-            payload:
+	        payload:
 	        'BYE sip:Fr4nkV1ncentZ4ppa@[3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
                 'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
-                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+            
+                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 BYE\r\n'+
                 'Supported: timer, path, replaces\r\n'+
@@ -270,24 +269,24 @@ var config = {
     			srcIp: '3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y',
     			dstIp: '21a0:m4m4:qx1p:s1p4:1234',
     			srcPort: 5070,
-    	  		dstPort: 5060                
+    	  		dstPort: 5060
     		},
     		pause: 1800,
-            payload:
+	        payload:
 	        'SIP/2.0 200 OK\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
-	            'CSeq: 1 BYE\r\n'+
+	        'CSeq: 1 BYE\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
-                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+            
-                'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+	            
-	            'User-Agent: HEPGEN-UAS\r\n'+
-	            'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
+                'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
+                'Via: SIP/2.0/UDP [21A0:M4M4:QX1P:S1P4:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+	        'User-Agent: HEPGEN-UAS\r\n'+
+	        'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
                 'Contact: <sip:Fr4nkV1ncentZ4ppa@[3l4k:s4bb:l3dd:z3pp:jim1:3drx:p1nk:fl0y];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Require: timer\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
-	            'Content-Length: 0\r\n'+
+	        'Content-Length: 0\r\n'+
                 'Supported: replaces, path, 100rel, timer\r\n'+
-	            '\r\n\r\n'
+	        '\r\n\r\n'
         },
     ]
 };
