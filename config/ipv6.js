@@ -24,7 +24,7 @@ var config = {
     			proto_type: 1,
     			correlation_id: call_id,
     			srcIp: '602d:44c6:f220:8e40::1234',
-    			dstIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',
+    			dstIp: 'fbb1:8f70:146e:6fab::12a0',
     			srcPort: 5060,
     	  		dstPort: 5070                
     		},
@@ -73,7 +73,7 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-    			srcIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',
+    			srcIp: 'fbb1:8f70:146e:6fab::12a0',
                 dstIp: '602d:44c6:f220:8e40::1234',
     			srcPort: 5070,
     	  		dstPort: 5060
@@ -103,7 +103,7 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',
+                srcIp: 'fbb1:8f70:146e:6fab::12a0',
                 dstIp: '602d:44c6:f220:8e40::1234',
     			srcPort: 5070,
     	  		dstPort: 5060
@@ -137,7 +137,6 @@ var config = {
                 'a=silenceSupp:off - - - -\r\n'+
                 '\r\n\r\n'
         },
-
         {
             // SIP Response 200 OK
     		rcinfo: {
@@ -150,7 +149,7 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',
+                srcIp: 'fbb1:8f70:146e:6fab::12a0',
                 dstIp: '602d:44c6:f220:8e40::1234',
     			srcPort: 5070,
     	  		dstPort: 5060
@@ -187,7 +186,6 @@ var config = {
                 'a=silenceSupp:off - - - -\r\n'+
 	        '\r\n\r\n'
         },
-
         {
             // SIP ACK
     		rcinfo: {
@@ -201,7 +199,7 @@ var config = {
     			proto_type: 1,
     			correlation_id: call_id,
                 srcIp: '602d:44c6:f220:8e40::1234',
-                dstIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',                
+                dstIp: 'fbb1:8f70:146e:6fab::12a0',                
     			srcPort: 5060,
     	  		dstPort: 5070
     		},
@@ -219,7 +217,6 @@ var config = {
                 'Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, PRACK\r\n'+
                 '\r\n\r\n'
         },
-
         {
             // SIP BYE
     		rcinfo: {
@@ -233,7 +230,7 @@ var config = {
     			proto_type: 1,
     			correlation_id: call_id,
                 srcIp: '602d:44c6:f220:8e40::1234',
-                dstIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',                
+                dstIp: 'fbb1:8f70:146e:6fab::12a0',                
     			srcPort: 5060,
     	  		dstPort: 5070
     		},
@@ -253,7 +250,6 @@ var config = {
                 'User-Agent: HEPGEN-UAS\r\n'+
                 '\r\n\r\n'
         },
-
         {
             // SIP Response 200 OK (final)
     		rcinfo: {
@@ -266,7 +262,7 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0',                
+                srcIp: 'fbb1:8f70:146e:6fab::12a0',                
                 dstIp: '602d:44c6:f220:8e40::1234',
     			srcPort: 5070,
     	  		dstPort: 5060
