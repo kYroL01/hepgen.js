@@ -1,7 +1,7 @@
 // HEPGEN-JS SETTINGS for the IPv6 scenario
 // ------------------------------------------------------
 
-var call_id = Math.random().toString(36).substring(7) + '@0:0:0:0:0:0:0:1';
+var call_id = Math.random().toString(36).substring(7) + '@1:1:2:2:3';
 
 var config = {
     NAME: 'SIP Session + All Reports',
@@ -23,17 +23,17 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-    			srcIp: '602d:44c6:f220:8e40::1234',
-    			dstIp: 'fbb1:8f70:146e:6fab::12a0',
+    			srcIp: '2a01:4f8:160:7394::2',
+    			dstIp: 'fe80::ca60:ff:fee9:47f0',
     			srcPort: 5060,
-    	  		dstPort: 5070                
+    	  		dstPort: 5070
     		},
     		pause: 0,
 	        payload:
 	        'INVITE sip:hepgen@lge.qxip.ipcx.nl;user=phone SIP/2.0\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394:0:0:0:2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[602d:44c6:f220:8e40::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 INVITE\r\n'+
@@ -47,9 +47,9 @@ var config = {
                 'Content-Length: 284\r\n'+
                 'User-Agent: HEPGEN-UAC\r\n'+
                 'v=0\r\n'+
-                'o=FreeSWITCH 1586327319 1586327320 IN IP6 602d:44c6:f220:8e40::1234\r\n'+
+                'o=FreeSWITCH 1586327319 1586327320 IN IP6 2a01:4f8:160:7394::2\r\n'+
                 's=FreeSWITCH\r\n'+
-                'c=IN IP6 602d:44c6:f220:8e40::5555\r\n'+
+                'c=IN IP6 2a01:4f8:160:7394::5555\r\n'+
                 't=0 0\r\n'+
                 'm=audio 44555 RTP/AVP 8 0 101\r\n'+
                 'a=rtpmap:8 PCMA/8000\r\n'+
@@ -73,8 +73,8 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-    			srcIp: 'fbb1:8f70:146e:6fab::12a0',
-                dstIp: '602d:44c6:f220:8e40::1234',
+			srcIp: 'fe80::ca60:ff:fee9:47f0',
+			dstIp: '2a01:4f8:160:7394::2',
     			srcPort: 5070,
     	  		dstPort: 5060
     		},
@@ -83,11 +83,11 @@ var config = {
 	        'SIP/2.0 100 Trying\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 INVITE\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[602d:44c6:f220:8e40::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394:0:0:0:2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Content-Length: 0\r\n'+
-                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp>\r\n'+
+                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp>\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
                 '\r\n\r\n'
         },
@@ -103,8 +103,8 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab::12a0',
-                dstIp: '602d:44c6:f220:8e40::1234',
+			srcIp: 'fe80::ca60:ff:fee9:47f0',
+                        dstIp: '2a01:4f8:160:7394::2',
     			srcPort: 5070,
     	  		dstPort: 5060
     		},
@@ -113,11 +113,11 @@ var config = {
 	        'SIP/2.0 180 Ringing\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 INVITE\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394:0:0:0:2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Content-Length: 285\r\n'+
-                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
+                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Content-Type: application/sdp\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
                 'Allow: INVITE,BYE,ACK,OPTIONS,CANCEL,PRACK,UPDATE\r\n'+
@@ -125,7 +125,7 @@ var config = {
                 'v=0\r\n'+
                 'o=- 3795340956 3795340956 IN IP6 oit.k1r0l.qxiphepgenipv6.ipcx.nl\r\n'+
                 's=-\r\n'+
-                'c=IN IP6 fbb1:8f70:146e:6fab::7777\r\n'+
+                'c=IN IP6 fe80::ca60:ff:fee9:47f0:7777\r\n'+
                 't=0 0\r\n'+
                 'm=audio 33000 RTP/AVP 8 101\r\n'+
                 'a=sendrecv\r\n'+
@@ -149,8 +149,8 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab::12a0',
-                dstIp: '602d:44c6:f220:8e40::1234',
+			srcIp: 'fe80::ca60:ff:fee9:47f0',
+                        dstIp: '2a01:4f8:160:7394::2',
     			srcPort: 5070,
     	  		dstPort: 5060
     		},
@@ -159,13 +159,13 @@ var config = {
 	        'SIP/2.0 200 OK\r\n'+
                 'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394:0:0:0:2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
 	        'Call-ID: '+call_id+'\r\n'+
 	        'CSeq: 1 INVITE\r\n'+
 	        'User-Agent: HEPGEN-UAS\r\n'+
 	        'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
 	        'Supported: replaces path, 100rel, timer\r\n'+
-                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
+                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Require: timer\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
 	        'Content-Type: application/sdp\r\n'+
@@ -174,7 +174,7 @@ var config = {
 	        'v=0\r\n'+
                 'o=- 3795340956 3795340956 IN IP6 oit.k1r0l.qxiphepgenipv6.ipcx.nl\r\n'+
                 's=-\r\n'+
-                'c=IN IP6 fbb1:8f70:146e:6fab::7777\r\n'+
+                'c=IN IP6 fe80::ca60:ff:fee9:7777\r\n'+
                 't=0 0ì\r\n'+
                 'm=audio 33000 RTP/AVP 8 101\r\n'+
                 'a=sendrecv\r\n'+
@@ -198,21 +198,21 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: '602d:44c6:f220:8e40::1234',
-                dstIp: 'fbb1:8f70:146e:6fab::12a0',                
+			srcIp: '2a01:4f8:160:7394::2',
+                        dstIp: 'fe80::ca60:ff:fee9:47f0',
     			srcPort: 5060,
     	  		dstPort: 5070
     		},
     		pause: 1400,
 	        payload:
-	        'ACK sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+	        'ACK sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394::2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[21a0:m4m4:qx1p:s1p4::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 ACK\r\n'+
-                'Contact: <sip:mod_sofia@[602d:44c6:f220:8e40:0:0:0:1234]:5060>\r\n'+
+                'Contact: <sip:mod_sofia@[2a01:4f8:160:7394::2]:5060>\r\n'+
                 'Content-Length: 0\r\n'+
                 'Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, PRACK\r\n'+
                 '\r\n\r\n'
@@ -229,17 +229,17 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: '602d:44c6:f220:8e40::1234',
-                dstIp: 'fbb1:8f70:146e:6fab::12a0',                
+			srcIp: '2a01:4f8:160:7394::2',
+                        dstIp: 'fe80::ca60:ff:fee9:47f0',
     			srcPort: 5060,
     	  		dstPort: 5070
     		},
     		pause: 1600,
 	        payload:
-	        'BYE sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+	        'BYE sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY SIP/2.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394::2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
                 'Max-Forwards: 70\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[602d:44c6:f220:8e40::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
                 'CSeq: 1 BYE\r\n'+
@@ -262,8 +262,8 @@ var config = {
     			protocol: 17,
     			proto_type: 1,
     			correlation_id: call_id,
-                srcIp: 'fbb1:8f70:146e:6fab::12a0',                
-                dstIp: '602d:44c6:f220:8e40::1234',
+			srcIp: 'fe80::ca60:ff:fee9:47f0',
+                        dstIp: '2a01:4f8:160:7394::2',
     			srcPort: 5070,
     	  		dstPort: 5060
     		},
@@ -272,12 +272,12 @@ var config = {
 	        'SIP/2.0 200 OK\r\n'+
                 'Call-ID: '+call_id+'\r\n'+
 	        'CSeq: 1 BYE\r\n'+
-                'From: "+31602146974" <sip:+31602146974@[602d:44c6:f220:8e40::1234]>;tag=g4t6aU1XaFr5S\r\n'+
+                'From: "+31602146974" <sip:+31602146974@[2a01:4f8:160:7394::2]>;tag=g4t6aU1XaFr5S\r\n'+
                 'To: <sip:+31612366699@lge.qxip.ipcx.nl;user=phone>;tag=127.0.0.1alUtKGp-01039+1+e15c0013+8c18051\r\n'+
-                'Via: SIP/2.0/UDP [602d:44c6:f220:8e40:0:0:0:1234];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
+                'Via: SIP/2.0/UDP [2a01:4f8:160:7394::2];branch=z9hG4bK934d.2b60491d4b2268c90e588d8a91e4bba9.0\r\n'+
 	        'User-Agent: HEPGEN-UAS\r\n'+
 	        'Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY\r\n'+
-                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fbb1:8f70:146e:6fab:1b11:b6a8:a0d5:12a0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
+                'Contact: <sip:Fr4nkV1ncentZ4ppa@[fe80::ca60:ff:fee9:47f0];transport=udp>;oai=yyyyBv6Taw8yS_bWr+owxY+5x_8sYTXY>\r\n'+
                 'Require: timer\r\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\r\n'+
 	        'Content-Length: 0\r\n'+
