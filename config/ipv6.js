@@ -121,7 +121,7 @@ var config = {
                 'Content-Type: application/sdp\n'+
                 'Server: Bluebol 5060 MGC-8 1.2.0.4.SP2.1\n'+
                 'Allow: INVITE,BYE,ACK,OPTIONS,CANCEL,PRACK,UPDATE\n'+
-                'P-Early-Media: sendrecv\n'+
+                'P-Early-Media: sendrecv\n\n'+
                 'v=0\n'+
                 'o=- 3795340956 3795340956 IN IP6 oit.k1r0l.qxiphepgenipv6.ipcx.nl\n'+
                 's=-\n'+
